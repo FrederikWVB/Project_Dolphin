@@ -13,28 +13,31 @@ public class Member {
     }
 
 
-    public static ArrayList<Member> createMemberList() throws FileNotFoundException {
-        File memberfile = new File("resources/medlemsliste.csv");
-        Scanner fileScanner = new Scanner(memberfile);
+    public static ArrayList<Member> createMemberList() {
+        try {
+            File memberfile = new File("resources/medlemsliste.csv");
+            Scanner fileScanner = new Scanner(memberfile);
+            fileScanner.nextLine();
 
-        ArrayList<Member> memberArrayList = new ArrayList<>();
+            ArrayList<Member> memberArrayList = new ArrayList<>();
 
-        fileScanner.nextLine();
+            while (fileScanner.hasNext()) {
+                String currentLine = fileScanner.nextLine();
+                String[] lineAsArray = currentLine.split(";");
 
+                String name = lineAsArray[0];
+                int age = tryParse(lineAsArray[1]);
 
-        while (fileScanner.hasNext()){
-            String currentLine = fileScanner.nextLine();
-            String[] lineAsArray = currentLine.split(";");
+                Member tempMember = new Member(name, age);
+                memberArrayList.add(tempMember);
+            }
 
-            String name = lineAsArray[0];
-            int age = tryParse(lineAsArray[1]);
-
-            Member tempMember = new Member(name,age);
-
-            memberArrayList.add(tempMember);
+            return memberArrayList;
         }
-
-        return memberArrayList;
+        catch (FileNotFoundException e){
+            System.out.println("File Not Found");
+            return new ArrayList<Member>();
+        }
     }
 
     public static int tryParse(String text) {
