@@ -15,8 +15,8 @@ public class Member {
 
     public static ArrayList<Member> createMemberList() {
         try {
-            File memberfile = new File("resources/medlemsliste.csv");
-            Scanner fileScanner = new Scanner(memberfile);
+            File memberFile = new File("resources/medlemsliste.csv");
+            Scanner fileScanner = new Scanner(memberFile);
             fileScanner.nextLine();
 
             ArrayList<Member> memberArrayList = new ArrayList<>();
@@ -25,8 +25,8 @@ public class Member {
                 String currentLine = fileScanner.nextLine();
                 String[] lineAsArray = currentLine.split(";");
 
-                String name = lineAsArray[0];
-                int age = tryParse(lineAsArray[1]);
+                String name = lineAsArray[0].strip();
+                int age = tryParse(lineAsArray[1].strip());
 
                 Member tempMember = new Member(name, age);
                 memberArrayList.add(tempMember);
