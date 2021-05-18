@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class Member {
     String name;
     int age;
+    boolean active;
+    boolean competitive;
 
     public Member(String name, int age) {
         this.name = name;
