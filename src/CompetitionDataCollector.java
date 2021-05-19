@@ -1,11 +1,9 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CompetitionDataManager {
+public class CompetitionDataCollector {
     int id;
     String disciplin;
     double tid;
@@ -13,7 +11,7 @@ public class CompetitionDataManager {
     String dato;
     String staevne;
 
-    public CompetitionDataManager(int id, String disciplin, double tid, int placering, String dato, String staevne) {
+    public CompetitionDataCollector(int id, String disciplin, double tid, int placering, String dato, String staevne) {
         this.id = id;
         this.disciplin = disciplin;
         this.tid = tid;
@@ -24,13 +22,13 @@ public class CompetitionDataManager {
 
     /*importere konkurrencetid textfile*/
 
-    public static ArrayList<CompetitionDataManager> competitionCollector(int id, String reqDiscipline) {
+    public static ArrayList<CompetitionDataCollector> competitionCollector(int id, String reqDiscipline) {
         try {
             File competitionFile = new File("resources/CompetitionTime/" + id + ".csv");
             Scanner fileScanner = new Scanner(competitionFile);
             fileScanner.nextLine();
 
-            ArrayList<CompetitionDataManager> disciplineList = new ArrayList<>();
+            ArrayList<CompetitionDataCollector> disciplineList = new ArrayList<>();
 
             while (fileScanner.hasNext()) {
 
@@ -46,7 +44,7 @@ public class CompetitionDataManager {
                     String date = lineAsArray[3].strip();
                     String convention = lineAsArray[4].strip();
 
-                    CompetitionDataManager tempDiscipline = new CompetitionDataManager(id, discipline, time, placement, date, convention);
+                    CompetitionDataCollector tempDiscipline = new CompetitionDataCollector(id, discipline, time, placement, date, convention);
                     disciplineList.add(tempDiscipline);
                 }
             }
@@ -55,7 +53,7 @@ public class CompetitionDataManager {
         }
         catch (FileNotFoundException e){
             System.out.println("File Not Found");
-            return new ArrayList<CompetitionDataManager>();
+            return new ArrayList<CompetitionDataCollector>();
         }
     }
     }
