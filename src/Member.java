@@ -5,17 +5,19 @@ import java.util.Scanner;
 
 /*Konkurrencetider som parameter til member*/
 public class Member {
+    int id;
     String name;
     int age;
     boolean active;
     boolean competitive;
 
-    public Member(String name, int age) {
+    public Member(int id, String name, int age, boolean active, boolean competitive) {
+        this.id = id;
         this.name = name;
         this.age = age;
-
+        this.active = active;
+        this.competitive = competitive;
     }
-
 
     public static ArrayList<Member> createMemberList() {
         try {
@@ -29,10 +31,14 @@ public class Member {
                 String currentLine = fileScanner.nextLine();
                 String[] lineAsArray = currentLine.split(";");
 
-                String name = lineAsArray[0].strip();
-                int age = tryParse(lineAsArray[1].strip());
+                int id = Integer.parseInt(lineAsArray[0].strip());
+                String name = lineAsArray[1].strip();
+                int age = Integer.parseInt(lineAsArray[2].strip());
+                boolean active = Boolean.parseBoolean(lineAsArray[3].strip());
+                boolean competitive = Boolean.parseBoolean(lineAsArray[4].strip());
 
-                Member tempMember = new Member(name, age);
+
+                Member tempMember = new Member(id, name, age, active, competitive);
                 memberArrayList.add(tempMember);
             }
 

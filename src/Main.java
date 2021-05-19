@@ -12,5 +12,16 @@ public class Main
             System.out.println(memberArrayList.get(i).name + " " + memberArrayList.get(i).age);
         }
 
+        ArrayList<CompetitionDataManager> disclist = CompetitionDataManager.competitionCollector(5, "butterfly");
+
+        System.out.println(disclist.get(0).disciplin);
+        System.out.println(disclist.get(0).tid);
+        System.out.println(disclist.get(1).disciplin);
+        System.out.println(disclist.get(1).tid);
+
+
+
+
+
     }
 }

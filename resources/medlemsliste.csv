@@ -1,7 +1,7 @@
-navn;alder
-Andrea;24
-Jens;20
-Iqra;21
-Isabel;22
-Frederik;27
-Kurt;10
+id;navn;alder;active;competitive
+1;Andrea;24
+2;Jens;20
+3;Iqra;21
+4;Isabel;22
+5;Frederik;27
+6;Kurt;10
