@@ -13,6 +13,7 @@ public class Member {
     public Member(String name, int age) {
         this.name = name;
         this.age = age;
+
     }
 
 
