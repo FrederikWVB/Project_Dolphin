@@ -2,11 +2,18 @@ import java.util.ArrayList;
 
 public class Main
 {
+    static final ArrayList<Member> memberArrayList = Member.createMemberList();
+
     public static void main(String[] args) {
 
-        ArrayList<Member> memberArrayList = Member.createMemberList();
 
-        ArrayList<CompetitionDataCollector> compDiscList = DisciplineManager.collectDisciplineList(memberArrayList, "butterfly");
+
+
+
+
+
+
+        ArrayList<CompetitionDataCollector> compDiscList = DisciplineManager.collectDisciplineList("butterfly");
 
 
         for (int i = 0; i < compDiscList.size(); i++){
@@ -22,10 +29,13 @@ public class Main
 
         ArrayList<CompetitionDataCollector> disclist = CompetitionDataCollector.competitionCollector(5, "butterfly");
 
+
+
         System.out.println(disclist.get(0).disciplin);
         System.out.println(disclist.get(0).tid);
         System.out.println(disclist.get(1).disciplin);
         System.out.println(disclist.get(1).tid);
+
 
     }
 }

@@ -45,6 +45,7 @@ public class Member {
             return memberArrayList;
         }
         catch (FileNotFoundException e){
+            e.printStackTrace();
             System.out.println("File Not Found");
             return new ArrayList<Member>();
         }

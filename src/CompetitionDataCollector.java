@@ -35,7 +35,7 @@ public class CompetitionDataCollector {
                 String currentLine = fileScanner.nextLine();
                 String[] lineAsArray = currentLine.split(";");
 
-                if (lineAsArray[0].strip().equals(reqDiscipline)){
+                if (lineAsArray[0].strip().equalsIgnoreCase(reqDiscipline)){
                     //disciplin;tid;placering;dato;stævne
 
                     String discipline = lineAsArray[0].strip();
@@ -52,6 +52,7 @@ public class CompetitionDataCollector {
             return disciplineList;
         }
         catch (FileNotFoundException e){
+            e.printStackTrace();
             System.out.println("File Not Found");
             return new ArrayList<CompetitionDataCollector>();
         }
