@@ -1,7 +1,10 @@
 id;navn;alder;active;competitive
-1;Andrea;24
-2;Jens;20
-3;Iqra;21
-4;Isabel;22
-5;Frederik;27
-6;Kurt;10
+1;Andrea;24; true;true
+2;Jens;20;true;false
+3;Iqra;21;false;false;
+4;Isabel;22;true;false
+5;Frederik;27;false;false
+6;Kurt;10;true;false
+7; Niels;15;true;true
+8; Kim; 11;true;true
+10; Mia; 8;false;false
