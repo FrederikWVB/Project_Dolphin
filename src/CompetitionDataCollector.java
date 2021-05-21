@@ -10,19 +10,35 @@ public class CompetitionDataCollector {
     int placering;
     String dato;
     String staevne;
+    int age;
 
-    public CompetitionDataCollector(int id, String disciplin, double tid, int placering, String dato, String staevne) {
+    public CompetitionDataCollector(int id, String disciplin, double tid, int placering, String dato, String staevne, int age) {
         this.id = id;
         this.disciplin = disciplin;
         this.tid = tid;
         this.placering = placering;
         this.dato = dato;
         this.staevne = staevne;
+        this.age = age;
+    }
+
+
+    @Override
+    public int compareTo(CompetitionDataCollector other){
+        if(this.tid < other.tid){
+           return -1;
+        }
+        else if (this.tid > other.tid){
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 
     /*importere konkurrencetid textfile*/
 
-    public static ArrayList<CompetitionDataCollector> competitionCollector(int id, String reqDiscipline) {
+    public static ArrayList<CompetitionDataCollector> competitionCollector(int id, int age, String reqDiscipline) {
         try {
             File competitionFile = new File("resources/CompetitionTime/" + id + ".csv");
             Scanner fileScanner = new Scanner(competitionFile);
@@ -44,7 +60,7 @@ public class CompetitionDataCollector {
                     String date = lineAsArray[3].strip();
                     String convention = lineAsArray[4].strip();
 
-                    CompetitionDataCollector tempDiscipline = new CompetitionDataCollector(id, discipline, time, placement, date, convention);
+                    CompetitionDataCollector tempDiscipline = new CompetitionDataCollector(id, discipline, time, placement, date, convention, age);
                     disciplineList.add(tempDiscipline);
                 }
             }

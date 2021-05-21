@@ -2,26 +2,43 @@ import java.util.ArrayList;
 
 public class DisciplineManager {
 
-    public static ArrayList<CompetitionDataCollector> collectDisciplineList (String discipline){
+    public static void collectDisciplineList (String discipline){
 
         ArrayList<CompetitionDataCollector> completeDisciplineList = new ArrayList<>();
 
         for (int i = 0; i < Main.memberArrayList.size(); i++){
             if (Main.memberArrayList.get(i).competitive){
-                completeDisciplineList.addAll(CompetitionDataCollector.competitionCollector(Main.memberArrayList.get(i).id, discipline));
+                completeDisciplineList.addAll(CompetitionDataCollector.competitionCollector(Main.memberArrayList.get(i).id, Main.memberArrayList.get(i).age, discipline));
             }
         }
 
-        return completeDisciplineList;
+        Collections.sort(completeDisciplineList);
+
+        int JCounter =0;
+        int SCounter=0;
+
+
+        for (int i = 0; i < completeDisciplineList.size(); i++){
+            if(completeDisciplineList.get(i).age < 18 && JCounter < 5) {
+                juniorList.add(completeDisciplineList.get(i));
+                JCounter++;
+
+            }
+            else if (completeDisciplineList.get(i).age > 18 && SCounter < 5) {
+                seniorList.add(completeDisciplineList.get(i));
+                SCounter++;
+            }
+        }
+
+        System.out.println("JuniorList: ");
+        for (int i = 0; i < juniorList.size(); i++){
+            System.out.println(juniorList.get(i).id + " " + juniorList.get(i).tid);
+        }
+
+        System.out.println("Seniorliste:");
+        for (int i = 0; i < seniorList.size(); i++){
+            System.out.println(seniorList.get(i).id + " " + seniorList.get(i).tid);
+        }
+
     }
-
-    public static ArrayList<CompetitionDataCollector> sortedDisciplineList (String discipline){
-        ArrayList<CompetitionDataCollector> sortedList = collectDisciplineList(discipline);
-
-        //Sorteringsalgoritme der sorterer ArrayList elementer i forhold til tid
-
-        return sortedList;
-
-    }
-
 }
