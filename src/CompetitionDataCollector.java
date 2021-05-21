@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CompetitionDataCollector {
+public class CompetitionDataCollector implements Comparable<CompetitionDataCollector> {
     int id;
     String disciplin;
     double tid;

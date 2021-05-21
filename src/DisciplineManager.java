@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class DisciplineManager {
 
@@ -6,10 +8,14 @@ public class DisciplineManager {
 
         ArrayList<CompetitionDataCollector> completeDisciplineList = new ArrayList<>();
 
+        ArrayList<CompetitionDataCollector> juniorList = new ArrayList<>();
+        ArrayList<CompetitionDataCollector> seniorList = new ArrayList<>();
+
         for (int i = 0; i < Main.memberArrayList.size(); i++){
             if (Main.memberArrayList.get(i).competitive){
                 completeDisciplineList.addAll(CompetitionDataCollector.competitionCollector(Main.memberArrayList.get(i).id, Main.memberArrayList.get(i).age, discipline));
             }
+
         }
 
         Collections.sort(completeDisciplineList);
