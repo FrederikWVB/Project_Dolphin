@@ -1,9 +1,10 @@
+package Member;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/*Konkurrencetider som parameter til member*/
 public class Member {
     int id;
     String name;
@@ -17,6 +18,26 @@ public class Member {
         this.age = age;
         this.active = active;
         this.competitive = competitive;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public boolean isCompetitive() {
+        return competitive;
     }
 
     public static ArrayList<Member> createMemberList() {

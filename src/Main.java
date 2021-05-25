@@ -1,3 +1,6 @@
+import Member.Member;
+import Accounting.MembershipCalculation;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,7 +21,7 @@ public class Main
                 case 1:
                     System.out.println("View memberlist");
                     for (int i = 0; i < memberArrayList.size(); i++){
-                        System.out.println(memberArrayList.get(i).id + " " + memberArrayList.get(i).name + " " + memberArrayList.get(i).age);
+                        System.out.println(memberArrayList.get(i).getId() + " " + memberArrayList.get(i).getName() + " " + memberArrayList.get(i).getAge());
                     }
                     break;
 
@@ -44,6 +47,11 @@ public class Main
                     }
 
                     break;
+
+                case 3: //Print kontingentpriser for medlemmer
+                    MembershipCalculation.printMembersFee(memberArrayList);
+                    break;
+
 
                 case 10:
                     runProgram = false;
