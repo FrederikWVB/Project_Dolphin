@@ -5,30 +5,30 @@ import java.util.Scanner;
 
 public class CompetitionDataCollector implements Comparable<CompetitionDataCollector> {
     int id;
-    String disciplin;
-    double tid;
-    int placering;
-    String dato;
-    String staevne;
+    String discipline;
+    double time;
+    int place;
+    String date;
+    String convention;
     int age;
 
-    public CompetitionDataCollector(int id, String disciplin, double tid, int placering, String dato, String staevne, int age) {
+    public CompetitionDataCollector(int id, String discipline, double time, int place, String date, String convention, int age) {
         this.id = id;
-        this.disciplin = disciplin;
-        this.tid = tid;
-        this.placering = placering;
-        this.dato = dato;
-        this.staevne = staevne;
+        this.discipline = discipline;
+        this.time = time;
+        this.place = place;
+        this.date = date;
+        this.convention = convention;
         this.age = age;
     }
 
 
     @Override
     public int compareTo(CompetitionDataCollector other){
-        if(this.tid < other.tid){
+        if(this.time < other.time){
            return -1;
         }
-        else if (this.tid > other.tid){
+        else if (this.time > other.time){
             return 1;
         }
         else {
@@ -56,11 +56,11 @@ public class CompetitionDataCollector implements Comparable<CompetitionDataColle
 
                     String discipline = lineAsArray[0].strip();
                     double time = Double.parseDouble(lineAsArray[1].strip());
-                    int placement = Integer.parseInt(lineAsArray[2].strip());
+                    int place = Integer.parseInt(lineAsArray[2].strip());
                     String date = lineAsArray[3].strip();
                     String convention = lineAsArray[4].strip();
 
-                    CompetitionDataCollector tempDiscipline = new CompetitionDataCollector(id, discipline, time, placement, date, convention, age);
+                    CompetitionDataCollector tempDiscipline = new CompetitionDataCollector(id, discipline, time, place, date, convention, age);
                     disciplineList.add(tempDiscipline);
                 }
             }

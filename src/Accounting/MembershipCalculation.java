@@ -33,5 +33,4 @@ public class MembershipCalculation {
             System.out.println(calculateMembershipFee(memberArrayList.get(i)) + "kr.");
         }
     }
-
 }

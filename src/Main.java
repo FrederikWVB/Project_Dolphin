@@ -19,18 +19,18 @@ public class Main
 
             switch (userInput.nextInt()) {
                 case 1:
-                    System.out.println("View memberlist");
+                    System.out.println("View Memberlist");
                     for (int i = 0; i < memberArrayList.size(); i++){
                         System.out.println(memberArrayList.get(i).getId() + " " + memberArrayList.get(i).getName() + " " + memberArrayList.get(i).getAge());
                     }
                     break;
 
                 case 2:
-                    System.out.println("Skriv discipline");
+                    System.out.println("View Discipline");
                     switch (userInput.nextInt()) {
                         case 1:
                             System.out.println("View ButterflyList");
-                            DisciplineManager.collectDisciplineList("butterfly");
+                            DisciplineManager.collectDisciplineList("Butterfly");
                             break;
                         case 2:
                             System.out.println("View Crawl");
@@ -45,25 +45,20 @@ public class Main
                             DisciplineManager.collectDisciplineList("Breaststroke");
                             break;
                     }
-
                     break;
 
                 case 3: //Print kontingentpriser for medlemmer
                     MembershipCalculation.printMembersFee(memberArrayList);
                     break;
 
-
                 case 10:
                     runProgram = false;
                     break;
-
             }
-
 
         }
 
         //ArrayList<CompetitionDataCollector> disclist = CompetitionDataCollector.competitionCollector(5, "butterfly");
-
 
     }
 }

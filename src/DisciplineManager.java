@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-import Member.*;
-
 public class DisciplineManager {
 
     public static void collectDisciplineList (String discipline){
@@ -39,12 +37,12 @@ public class DisciplineManager {
 
         System.out.println("JuniorList: ");
         for (int i = 0; i < juniorList.size(); i++){
-            System.out.println(juniorList.get(i).id + " " + juniorList.get(i).tid);
+            System.out.println(juniorList.get(i).id + " " + juniorList.get(i).time);
         }
 
-        System.out.println("Seniorliste:");
+        System.out.println("SeniorList:");
         for (int i = 0; i < seniorList.size(); i++){
-            System.out.println(seniorList.get(i).id + " " + seniorList.get(i).tid);
+            System.out.println(seniorList.get(i).id + " " + seniorList.get(i).time);
         }
 
     }
