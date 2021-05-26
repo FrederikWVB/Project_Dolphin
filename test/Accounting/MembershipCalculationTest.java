@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class MembershipCalculationTest {
+    /*Guide til at lave unit test:
+    1. først går du op i projektnavnet og højreklikker
+    2. opret et nyt diretory
+    3. Så højreklikker du på dit nye directory og vælger "mark Directory as" og vælge "Test sources root"
+    4. Herefter går du ind på den klasse du vil teste og højreklikker på den, trykker generate og vælger test
+     */
 
     @Test
     void calculateMembershipFee() {
