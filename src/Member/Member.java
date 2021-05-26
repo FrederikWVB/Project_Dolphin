@@ -41,7 +41,7 @@ public class Member {
 
     public static ArrayList<Member> createMemberList() {
         try {
-            File memberFile = new File("resources/medlemsliste.csv");
+            File memberFile = new File("resources/MemberList.csv");
             Scanner fileScanner = new Scanner(memberFile);
             fileScanner.nextLine();
 
