@@ -22,31 +22,18 @@ public class DisciplineManager {
             }
         }
 
-        Collections.sort(completeDisciplineList);
+        Collections.sort(juniorList);
+        Collections.sort(seniorList);
 
-        int JCounter =0;
-        int SCounter=0;
 
-        /*
-        for (int i = 0; i < completeDisciplineList.size(); i++){
-            if(isMemberBelowEighteenAndCounterBelowFive(completeDisciplineList.get(i).age, JCounter)) {
-                juniorList.add(completeDisciplineList.get(i));
-                JCounter++;
-
-            }
-            else if (completeDisciplineList.get(i).age > 18 && SCounter < 5) {
-                seniorList.add(completeDisciplineList.get(i));
-                SCounter++;
-            }
-        }*/
 
         System.out.println("JuniorList: ");
-        for (int i = 0; i < juniorList.size(); i++){
+        for (int i = 0; i < 5; i++){
             System.out.println(juniorList.get(i).id + " " + juniorList.get(i).time);
         }
 
         System.out.println("SeniorList:");
-        for (int i = 0; i < seniorList.size(); i++){
+        for (int i = 0; i < 5; i++){
             System.out.println(seniorList.get(i).id + " " + seniorList.get(i).time);
         }
     }
