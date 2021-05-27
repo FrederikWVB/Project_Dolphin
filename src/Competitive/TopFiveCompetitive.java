@@ -40,14 +40,14 @@ public class TopFiveCompetitive {
     private static void printTopFiveList(ArrayList<Competitor> compList, String discipline, String ageBracket){
         int topFiveCounter = 0;
         String intro = "┌─────── Top Five " + ageBracket + " List for " + discipline + " ";
-        String outtro = "└────────────────────────────────────────────────────────────────";
+        String outtro = "└──────────────────────────────────────────────────";
         System.out.println(padding(intro, outtro));
 
         for (int i = 0; i < compList.size(); i++){
             if (topFiveCounter < 5){
                 System.out.print("│Swimmer ID: " + compList.get(i).id);
                 System.out.print(" - Time: " + compList.get(i).time);
-                System.out.println(" - Original competition placement: " + compList.get(i).place);
+                System.out.println(" - Competition rank: " + compList.get(i).place);
                 topFiveCounter++;
             }
         }

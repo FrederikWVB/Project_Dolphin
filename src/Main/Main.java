@@ -34,6 +34,9 @@ public class Main
             UI.showMainMenu();
 
             switch (userInput.nextInt()) {
+                case 0:
+                    UI.clear();
+                    break;
                 case 1:
                     Member.printMemberlist(memberArrayList);
                     break;
