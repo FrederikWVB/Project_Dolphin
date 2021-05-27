@@ -33,26 +33,32 @@ public class TopFiveCompetitive {
         Collections.sort(juniorList);
         Collections.sort(seniorList);
 
+        printTopFiveList(juniorList, discipline, "Junior");
+        printTopFiveList(seniorList, discipline, "Senior");
+    }
 
-
+    private static void printTopFiveList(ArrayList<Competitor> compList, String discipline, String ageBracket){
         int topFiveCounter = 0;
+        String intro = "┌─────── Top Five " + ageBracket + " List for " + discipline + " ";
+        String outtro = "└────────────────────────────────────────────────────────────────";
+        System.out.println(padding(intro, outtro));
 
-        System.out.println("JuniorList " + discipline + ":");
-        for (int i = 0; i < juniorList.size(); i++){
+        for (int i = 0; i < compList.size(); i++){
             if (topFiveCounter < 5){
-                System.out.println(juniorList.get(i).id + " " + juniorList.get(i).time);
+                System.out.print("│Swimmer ID: " + compList.get(i).id);
+                System.out.print(" - Time: " + compList.get(i).time);
+                System.out.println(" - Original competition placement: " + compList.get(i).place);
                 topFiveCounter++;
             }
         }
+        System.out.println(outtro);
+    }
 
-        topFiveCounter = 0;
-
-        System.out.println("SeniorList " + discipline + ":");
-        for (int i = 0; i < seniorList.size(); i++){
-            if (topFiveCounter < 5){
-                System.out.println(seniorList.get(i).id + " " + seniorList.get(i).time);
-                topFiveCounter++;
-            }
+    private static String padding(String intro, String outtro){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < outtro.length(); i++) {
+            sb.append('─');
         }
+        return intro + sb.substring(intro.length());
     }
 }

@@ -35,11 +35,11 @@ public class MembershipCalculation {
 
         for (int i = 0; i < memberArrayList.size(); i++){
             memberFee = calculateMembershipFee(memberArrayList.get(i));
-            System.out.print(memberArrayList.get(i).getId() + " " + memberArrayList.get(i).getName() + ": ");
+            System.out.print("ID: " + memberArrayList.get(i).getId() + " - Name: " + memberArrayList.get(i).getName() + ": ");
             System.out.println(memberFee + "kr.");
             total = total + memberFee;
         }
-        System.out.println("Total membership fee income:");
+        System.out.println("\nTotal membership fee income:");
         System.out.println(total + "kr.");
     }
 }

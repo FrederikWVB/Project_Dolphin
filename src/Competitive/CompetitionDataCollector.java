@@ -44,7 +44,13 @@ public class CompetitionDataCollector {
         }
         catch (FileNotFoundException e){
             e.printStackTrace();
-            System.out.println("File Not Found");
+            System.out.println("»ERROR: File Not Found");
+            System.out.println("»ID: " + id + " Has no competitor Data. Check /CompetitionTime directory");
+            return new ArrayList<Competitor>();
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("»ERROR: Some swim data might be incomplete");
+            System.out.println("»ID: " + id + " Has incomplete " + swimDiscipline + " Data");
             return new ArrayList<Competitor>();
         }
     }

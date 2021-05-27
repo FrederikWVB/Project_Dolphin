@@ -83,4 +83,16 @@ public class Member {
             return 0;
         }
     }
+
+    public static void printMemberlist(ArrayList<Member> memberArrayList){
+        for (int i = 0; i < memberArrayList.size(); i++){
+            System.out.print("ID: " + memberArrayList.get(i).getId() + " - ");
+            System.out.print("Age: " + memberArrayList.get(i).getAge() + " - ");
+            System.out.print("Name: " + memberArrayList.get(i).getName() + " ");
+            if (memberArrayList.get(i).isCompetitive()){
+                System.out.print(" ⭐ ");
+            }
+            System.out.println(" ");
+        }
+    }
 }

@@ -1,8 +1,8 @@
 package Competitive;
 
 /**
- * @author Frederik Wandall von Benzon
  * @author Andrea Brinkbøl
+ * @author Frederik Wandall von Benzon
  */
 
 public class Competitor implements Comparable<Competitor> {

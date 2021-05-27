@@ -28,33 +28,23 @@ public class Main
         Scanner userInput = new Scanner(System.in);
         boolean runProgram = true;
 
+        UI.programBanner();
 
         while (runProgram){
             UI.showMainMenu();
 
             switch (userInput.nextInt()) {
                 case 1:
-                    //TODO: Lav toString metode (evt. i Member class)
-                    for (int i = 0; i < memberArrayList.size(); i++){
-                        System.out.println(memberArrayList.get(i).getId() + " " + memberArrayList.get(i).getName() + " " + memberArrayList.get(i).getAge());
-                    }
+                    Member.printMemberlist(memberArrayList);
                     break;
 
                 case 2:
                     UI.showDisciplineList();
                     switch (userInput.nextInt()) {
-                        case 1:
-                            TopFiveCompetitive.disciplineList("Butterfly");
-                            break;
-                        case 2:
-                            TopFiveCompetitive.disciplineList("Crawl");
-                            break;
-                        case 3:
-                            TopFiveCompetitive.disciplineList("Breaststroke");
-                            break;
-                        case 4:
-                            TopFiveCompetitive.disciplineList("Backstroke");
-                            break;
+                        case 1 -> TopFiveCompetitive.disciplineList("Butterfly");
+                        case 2 -> TopFiveCompetitive.disciplineList("Crawl");
+                        case 3 -> TopFiveCompetitive.disciplineList("Breaststroke");
+                        case 4 -> TopFiveCompetitive.disciplineList("Backstroke");
                     }
                     break;
 

@@ -11,12 +11,20 @@ public class UI {
         System.out.flush();
     }
 
+    public static void programBanner(){
+        System.out.println("Gruppe-5 Software inc. (Copyright © 1982)");
+        System.out.println("╔═══════════════════════════════════════╗");
+        System.out.println("║        Svømmeklubben Delfinen         ║");
+        System.out.println("╚═══════════════════════════════════════╝");
+    }
+
     public static void showMainMenu(){
-        System.out.println("Main Menu");
-        System.out.println("1: Show Member.Member list");
-        System.out.println("2: Show Top 5 swim times for specific discipline");
-        System.out.println("3: Show Membership fees for all members");
-        System.out.println("10: Exit program");
+        System.out.println("┌───────────────Main Menu───────────────┐");
+        System.out.println("│»1 Show list of members                │");
+        System.out.println("│»2 Show Top 5 competitive swim times   │");
+        System.out.println("│»3 Show Membership fees for all members│");
+        System.out.println("│»10 Exit program                       │");
+        System.out.println("└───────────────────────────────────────┘");
     }
 
     public static void showDisciplineList(){
