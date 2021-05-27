@@ -9,8 +9,10 @@ import java.util.Scanner;
 
 /**
  * @author Frederik Wandall von Benzon
+ * @author Andrea Brinkbøl
  * @author Iqra Aliya Abbasi
  * @author Isabel Patulski Nielsen
+ * @author Jens Christian Lund Jørgensen
  */
 
 public class Main
