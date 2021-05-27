@@ -1,3 +1,6 @@
+package Main;
+
+import Competitive.TopFiveCompetitive;
 import Member.Member;
 import Accounting.MembershipCalculation;
 
@@ -6,7 +9,11 @@ import java.util.Scanner;
 
 public class Main
 {
-    static final ArrayList<Member> memberArrayList = Member.createMemberList();
+    private static final ArrayList<Member> memberArrayList = Member.createMemberList();
+
+    public static ArrayList<Member> getMemberArrayList() {
+        return memberArrayList;
+    }
 
     public static void main(String[] args) {
 
@@ -19,30 +26,25 @@ public class Main
 
             switch (userInput.nextInt()) {
                 case 1:
-                    System.out.println("View Memberlist");
                     for (int i = 0; i < memberArrayList.size(); i++){
                         System.out.println(memberArrayList.get(i).getId() + " " + memberArrayList.get(i).getName() + " " + memberArrayList.get(i).getAge());
                     }
                     break;
 
                 case 2:
-                    System.out.println("View Discipline");
+                    UI.showDisciplineList();
                     switch (userInput.nextInt()) {
                         case 1:
-                            System.out.println("View ButterflyList");
-                            DisciplineManager.collectDisciplineList("Butterfly");
+                            TopFiveCompetitive.collectDisciplineList("Butterfly");
                             break;
                         case 2:
-                            System.out.println("View Crawl");
-                            DisciplineManager.collectDisciplineList("Crawl");
+                            TopFiveCompetitive.collectDisciplineList("Crawl");
                             break;
                         case 3:
-                            System.out.println("View Backstroke");
-                            DisciplineManager.collectDisciplineList("Backstroke");
+                            TopFiveCompetitive.collectDisciplineList("Breaststroke");
                             break;
                         case 4:
-                            System.out.println("View Breaststroke");
-                            DisciplineManager.collectDisciplineList("Breaststroke");
+                            TopFiveCompetitive.collectDisciplineList("Backstroke");
                             break;
                     }
                     break;
@@ -57,8 +59,6 @@ public class Main
             }
 
         }
-
-        //ArrayList<CompetitionDataCollector> disclist = CompetitionDataCollector.competitionCollector(5, "butterfly");
 
     }
 }
