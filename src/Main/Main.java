@@ -26,6 +26,7 @@ public class Main
 
             switch (userInput.nextInt()) {
                 case 1:
+                    //TODO: Lav toString metode (evt. i Member class)
                     for (int i = 0; i < memberArrayList.size(); i++){
                         System.out.println(memberArrayList.get(i).getId() + " " + memberArrayList.get(i).getName() + " " + memberArrayList.get(i).getAge());
                     }
@@ -35,16 +36,16 @@ public class Main
                     UI.showDisciplineList();
                     switch (userInput.nextInt()) {
                         case 1:
-                            TopFiveCompetitive.collectDisciplineList("Butterfly");
+                            TopFiveCompetitive.disciplineList("Butterfly");
                             break;
                         case 2:
-                            TopFiveCompetitive.collectDisciplineList("Crawl");
+                            TopFiveCompetitive.disciplineList("Crawl");
                             break;
                         case 3:
-                            TopFiveCompetitive.collectDisciplineList("Breaststroke");
+                            TopFiveCompetitive.disciplineList("Breaststroke");
                             break;
                         case 4:
-                            TopFiveCompetitive.collectDisciplineList("Backstroke");
+                            TopFiveCompetitive.disciplineList("Backstroke");
                             break;
                     }
                     break;
@@ -57,8 +58,6 @@ public class Main
                     runProgram = false;
                     break;
             }
-
         }
-
     }
 }

@@ -7,7 +7,7 @@ import Main.Main;
 
 public class TopFiveCompetitive {
 
-    public static void collectDisciplineList (String discipline){
+    public static void disciplineList(String discipline){
 
         //ArrayList<Competitive.CompetitionDataCollector> completeDisciplineList = new ArrayList<>();
 
