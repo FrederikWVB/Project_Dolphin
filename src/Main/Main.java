@@ -7,6 +7,10 @@ import Accounting.MembershipCalculation;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Isabel Patulski Nielsen
+ */
+
 public class Main
 {
     private static final ArrayList<Member> memberArrayList = Member.createMemberList();

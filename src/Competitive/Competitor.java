@@ -5,6 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Andrea Brinkbøl
+ */
+
 public class Competitor implements Comparable<Competitor> {
     int id;
     String discipline;

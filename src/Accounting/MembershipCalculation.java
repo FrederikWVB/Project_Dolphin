@@ -3,7 +3,9 @@ package Accounting;
 import Member.Member;
 
 import java.util.ArrayList;
-
+/**
+ * @author Frederik Wandall Von Benzon
+ */
 public class MembershipCalculation {
 
     public static double calculateMembershipFee (Member member){

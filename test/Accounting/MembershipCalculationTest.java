@@ -4,6 +4,10 @@ import Member.Member;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @author Iqra Aliya Abbasi
+ */
+
 
 class MembershipCalculationTest {
     /*Guide til at lave unit test:

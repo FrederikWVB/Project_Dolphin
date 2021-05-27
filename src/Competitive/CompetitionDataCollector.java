@@ -5,7 +5,13 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Frederik Wandall Von Benzon
+ */
+
 public class CompetitionDataCollector {
+
+
 
     public static ArrayList<Competitor> competitionCollector(int id, int age, String swimDiscipline) {
         try {

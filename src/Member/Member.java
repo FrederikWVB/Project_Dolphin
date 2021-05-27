@@ -4,6 +4,10 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * @author Jens Christian Lund Jørgensen
+ */
+
 public class Member {
     int id;
     String name;

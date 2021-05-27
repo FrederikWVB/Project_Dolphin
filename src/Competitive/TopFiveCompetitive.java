@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import Main.Main;
+/**
+ * @author Jens Christian Lund Jørgensen
+ */
 
 public class TopFiveCompetitive {
 

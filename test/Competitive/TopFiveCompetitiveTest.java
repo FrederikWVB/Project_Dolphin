@@ -3,6 +3,9 @@ package Competitive;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+/**
+ * @author Andrea Brinkbøl
+ */
 
 class TopFiveCompetitiveTest {
 
@@ -23,6 +26,4 @@ class TopFiveCompetitiveTest {
         assertEquals("butterfly",b);
         assertEquals("backstroke",back);
     }
-
-
 }
