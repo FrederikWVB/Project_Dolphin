@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * @author Frederik Wandall von Benzon
+ * @author Iqra Aliya Abbasi
  * @author Isabel Patulski Nielsen
  */
 

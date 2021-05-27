@@ -3,6 +3,7 @@ package Main;
 public class UI {
     /**
      * @author Iqra Aliya Abbasi
+     * @author Isabel Patulski Nielsen
      */
 
     public static void clear(){

@@ -5,7 +5,8 @@ import java.util.Collections;
 
 import Main.Main;
 /**
- * @author Jens Christian Lund Jørgensen
+ * @author Frederik Wandall von Benzon
+ * @author Andrea Brinkbøl
  */
 
 public class TopFiveCompetitive {

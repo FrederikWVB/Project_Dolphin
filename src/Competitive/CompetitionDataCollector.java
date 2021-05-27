@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * @author Frederik Wandall Von Benzon
+ * @author Frederik Wandall von Benzon
  */
 
 public class CompetitionDataCollector {

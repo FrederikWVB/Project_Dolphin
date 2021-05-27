@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * @author Frederik Wandall von Benzon
  * @author Jens Christian Lund Jørgensen
  */
 

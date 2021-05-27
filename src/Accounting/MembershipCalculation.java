@@ -4,7 +4,7 @@ import Member.Member;
 
 import java.util.ArrayList;
 /**
- * @author Frederik Wandall Von Benzon
+ * @author Frederik Wandall von Benzon
  */
 public class MembershipCalculation {
 
