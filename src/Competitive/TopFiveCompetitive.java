@@ -30,6 +30,7 @@ public class TopFiveCompetitive {
         Collections.sort(seniorList);
 
 
+
         int topFiveCounter = 0;
 
         System.out.println("JuniorList " + discipline + ":");
