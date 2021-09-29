@@ -28,6 +28,30 @@ som jeg endnu ikke ved hvordan håndteres.
 Så du nøjes med at skulle bruge et monster af en IDE der sluger 2GB RAM 
 for at køre et simpelt CLI-baseret program :P
 
+## Program resourcer
+
+Svømmeklubsmedlemmernes data ligger i mapperne herunder:
+
+```
+. Project_Dolphin
+├── /src
+├── /resources
+│   ├── Memberlist.csv
+│   └── /CompetitionTime
+│       ├── 1.csv
+│       ├── 2.csv
+│       └── ...
+└── ...
+```
+
+## Contact
+
+* [@FrederikWVB - Frederik Wandall von Benzon](https://github.com/FrederikWVB)
+
+## License
+
+Opensource osv. MIT, GNU GPL, gør hvad der passer jer.
+
 ## Hej Claus
 
 Håber det lever op til kravene.
